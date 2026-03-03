@@ -63,6 +63,25 @@
     });
   }
 
+  function measureCarouselTravel(carousel) {
+    if (!carousel) {
+      return 0;
+    }
+
+    var items = Array.from(carousel.children).filter(function (item) {
+      return item && item.nodeType === 1 && item.getClientRects().length > 0;
+    });
+
+    if (items.length < 2) {
+      return 0;
+    }
+
+    var firstTop = items[0].getBoundingClientRect().top;
+    var lastTop = items[items.length - 1].getBoundingClientRect().top;
+
+    return Math.max(0, Math.ceil(lastTop - firstTop));
+  }
+
   function applyReveal(element, progress, offsetY) {
     if (!element) {
       return;
@@ -448,7 +467,7 @@
         localState.contentWidth = Math.max(env.vw, Math.ceil(content.scrollWidth));
         localState.shrinkDistance = Math.max(360, Math.round(Math.min(env.vh * 0.9, env.vw - localState.targetWidth)));
         localState.horizontalDistance = Math.max(0, Math.ceil(content.scrollWidth - env.vw));
-        localState.verticalDistance = carousel ? Math.round(env.vh * 0.55) : 0;
+        localState.verticalDistance = measureCarouselTravel(carousel);
 
         section.style.height = env.vh + localState.shrinkDistance + localState.horizontalDistance + localState.verticalDistance + "px";
         localState.top = section.offsetTop;
