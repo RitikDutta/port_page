@@ -53075,3 +53075,12 @@ section.contact .logos .logo.dribbble svg,section.contact .logos .logo.instagram
 html {
   scroll-behavior: smooth;
 }
+
+@media only screen and (min-width:1280px) {
+  section.aston-martin .content .page.page-4 .carousel,
+  .lamborghini .content .page.page-4 .carousel {
+    align-self: flex-start;
+    height: auto;
+    justify-content: flex-start;
+  }
+}
