@@ -53378,14 +53378,20 @@ section.introduction h1 .logo video {
 }
 
 section#brands .brand-grid {
-  display: grid;
+  display: flex;
+  flex-wrap: nowrap;
   gap: 16px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-top: 24px;
+  will-change: transform;
   width: 100%;
 }
 
-section#brands .logos {
+section#brands .brand-grid .text-logo-card {
+  flex: 0 0 320px;
+  min-height: 148px;
+}
+
+section#brands .legacy-logos {
   display: none;
 }
 
@@ -53463,9 +53469,16 @@ section.container.professional .content .page.video .logos .item .reveal-mark {
   display: none;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 767px) {
   section#brands .brand-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  section#brands .brand-grid::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -53481,7 +53494,8 @@ section.container.professional .content .page.video .logos .item .reveal-mark {
   }
 
   section#brands .brand-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: nowrap;
   }
 
   .text-logo-card strong {
@@ -53490,6 +53504,10 @@ section.container.professional .content .page.video .logos .item .reveal-mark {
 
   .text-logo-card span {
     font-size: 12px;
+  }
+
+  section#brands .brand-grid .text-logo-card {
+    flex-basis: min(82vw, 300px);
   }
 
   section.container.professional .content .page.video .logos {

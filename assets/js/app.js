@@ -548,7 +548,7 @@
       section.appendChild(wrapper);
     }
 
-    var logos = wrapper.querySelector(".logos");
+    var logos = wrapper.querySelector(".brand-grid.logos") || wrapper.querySelector(".logos");
     var localState = {
       top: 0,
       horizontalDistance: 0,
