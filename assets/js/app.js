@@ -3,6 +3,7 @@
 
   var DESKTOP_BREAKPOINT = 1280;
   var SCENE_BREAKPOINT = 768;
+  var INTRO_SCENE_BREAKPOINT = 1024;
   var PHONE_BREAKPOINT = 480;
   var HEADER_OFFSET = 96;
   var INTRO_RING_LENGTH = 307.8760800517997;
@@ -396,7 +397,7 @@
 
     return {
       measure: function (env) {
-        if (!content || !videoFrame || !env.hasPinnedScenes) {
+        if (!content || !videoFrame || !env.hasIntroScene) {
           reset();
           return;
         }
@@ -413,7 +414,7 @@
       },
 
       render: function (env) {
-        if (!content || !videoFrame || !env.hasPinnedScenes) {
+        if (!content || !videoFrame || !env.hasIntroScene) {
           return;
         }
 
@@ -605,7 +606,7 @@
     var startups = section.querySelector(".thirds.startups");
     var videoPage = section.querySelector(".page.video");
     var titles = Array.from(section.querySelectorAll(".page.video .holder .title"));
-    var logoMarks = Array.from(section.querySelectorAll(".page.video .logos .item svg"));
+    var logoMarks = Array.from(section.querySelectorAll(".page.video .logos .item svg, .page.video .logos .item .reveal-mark"));
     var localState = {
       top: 0,
       leadDistance: 960,
@@ -735,6 +736,7 @@
       vh: window.innerHeight,
       scrollY: window.scrollY || window.pageYOffset || 0,
       isDesktop: window.innerWidth >= DESKTOP_BREAKPOINT,
+      hasIntroScene: window.innerWidth >= INTRO_SCENE_BREAKPOINT,
       hasPinnedScenes: window.innerWidth >= SCENE_BREAKPOINT,
       isPhone: window.innerWidth < PHONE_BREAKPOINT
     };
@@ -778,6 +780,7 @@
       env.vh = window.innerHeight;
       env.scrollY = window.scrollY || window.pageYOffset || 0;
       env.isDesktop = env.vw >= DESKTOP_BREAKPOINT;
+      env.hasIntroScene = env.vw >= INTRO_SCENE_BREAKPOINT;
       env.hasPinnedScenes = env.vw >= SCENE_BREAKPOINT;
       env.isPhone = env.vw < PHONE_BREAKPOINT;
     }
