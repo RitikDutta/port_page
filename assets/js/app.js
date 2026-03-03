@@ -2,6 +2,7 @@
   "use strict";
 
   var DESKTOP_BREAKPOINT = 1280;
+  var SCENE_BREAKPOINT = 768;
   var PHONE_BREAKPOINT = 480;
   var HEADER_OFFSET = 96;
   var INTRO_RING_LENGTH = 307.8760800517997;
@@ -61,6 +62,22 @@
     properties.forEach(function (property) {
       element.style[property] = "";
     });
+  }
+
+  function clearCustomProperty(element, property) {
+    if (!element) {
+      return;
+    }
+
+    element.style.removeProperty(property);
+  }
+
+  function getSceneBrandWidth(viewportWidth) {
+    return Math.round(clamp(viewportWidth * 0.44, 320, 500));
+  }
+
+  function getProfessionalPanelWidth(viewportWidth) {
+    return Math.round(clamp(viewportWidth * 0.4, 360, 520));
   }
 
   function measureCarouselTravel(carousel) {
@@ -372,13 +389,14 @@
     function reset() {
       resetPinnedSection(section, content);
       clearStyles(videoFrame, ["width", "height", "left", "top", "borderRadius", "transform"]);
+      clearCustomProperty(section, "--scene-brand-width");
       introVideo.setOverlayProgress(1);
       introVideo.setProfileState(false);
     }
 
     return {
       measure: function (env) {
-        if (!content || !videoFrame || !env.isDesktop) {
+        if (!content || !videoFrame || !env.hasPinnedScenes) {
           reset();
           return;
         }
@@ -395,7 +413,7 @@
       },
 
       render: function (env) {
-        if (!content || !videoFrame || !env.isDesktop) {
+        if (!content || !videoFrame || !env.hasPinnedScenes) {
           return;
         }
 
@@ -454,11 +472,12 @@
       resetPinnedSection(section, content);
       clearStyles(brandLeft, ["width"]);
       clearStyles(carousel, ["transform"]);
+      clearCustomProperty(section, "--scene-brand-width");
     }
 
     return {
       measure: function (env) {
-        if (!content || !brandLeft || !env.isDesktop) {
+        if (!content || !brandLeft || !env.hasPinnedScenes) {
           reset();
           return;
         }
@@ -472,9 +491,10 @@
         section.style.overflow = "visible";
         section.style.position = "relative";
 
-        localState.targetWidth = 500;
+        localState.targetWidth = getSceneBrandWidth(env.vw);
+        section.style.setProperty("--scene-brand-width", localState.targetWidth + "px");
         localState.contentWidth = Math.max(env.vw, Math.ceil(content.scrollWidth));
-        localState.shrinkDistance = Math.max(360, Math.round(Math.min(env.vh * 0.9, env.vw - localState.targetWidth)));
+        localState.shrinkDistance = Math.max(260, Math.round(Math.min(env.vh * 0.8, env.vw - localState.targetWidth)));
         localState.horizontalDistance = Math.max(0, Math.ceil(content.scrollWidth - env.vw));
         localState.verticalDistance = measureCarouselTravel(carousel);
 
@@ -483,7 +503,7 @@
       },
 
       render: function (env) {
-        if (!content || !brandLeft || !env.isDesktop) {
+        if (!content || !brandLeft || !env.hasPinnedScenes) {
           return;
         }
 
@@ -542,7 +562,7 @@
 
     return {
       measure: function (env) {
-        if (!wrapper || !logos || !env.isDesktop) {
+        if (!wrapper || !logos || !env.hasPinnedScenes) {
           reset();
           return;
         }
@@ -559,7 +579,7 @@
       },
 
       render: function (env) {
-        if (!logos || !env.isDesktop) {
+        if (!logos || !env.hasPinnedScenes) {
           return;
         }
 
@@ -598,6 +618,7 @@
     function showAllMobileStates() {
       resetPinnedSection(section, content);
       clearStyles(videoPage, ["left", "height"]);
+      clearCustomProperty(section, "--professional-panel-width");
       if (startups) {
         startups.style.visibility = "visible";
         startups.style.opacity = "1";
@@ -617,7 +638,7 @@
 
     return {
       measure: function (env) {
-        if (!content || !copyPanel || !videoPage || !env.isDesktop) {
+        if (!content || !copyPanel || !videoPage || !env.hasPinnedScenes) {
           showAllMobileStates();
           return;
         }
@@ -625,9 +646,13 @@
         section.style.overflow = "visible";
         section.style.position = "relative";
         clearStyles(content, ["position", "top", "left", "width", "height"]);
+        clearStyles(videoPage, ["left", "height"]);
+        localState.leadDistance = env.vw < DESKTOP_BREAKPOINT
+          ? getProfessionalPanelWidth(env.vw)
+          : Math.round(copyPanel.getBoundingClientRect().width || 960);
+        section.style.setProperty("--professional-panel-width", localState.leadDistance + "px");
+        videoPage.style.left = localState.leadDistance + "px";
         localState.contentWidth = Math.max(env.vw, Math.ceil(content.scrollWidth));
-
-        localState.leadDistance = Math.round(copyPanel.getBoundingClientRect().width || 960);
         localState.revealDistance = Math.round(env.vh * 0.72);
         localState.exitDistance = localState.leadDistance;
         localState.startHeight = Math.max(env.vh - 200, Math.round(env.vh * 0.76));
@@ -637,7 +662,7 @@
       },
 
       render: function (env) {
-        if (!content || !copyPanel || !videoPage || !env.isDesktop) {
+        if (!content || !copyPanel || !videoPage || !env.hasPinnedScenes) {
           return;
         }
 
@@ -710,6 +735,7 @@
       vh: window.innerHeight,
       scrollY: window.scrollY || window.pageYOffset || 0,
       isDesktop: window.innerWidth >= DESKTOP_BREAKPOINT,
+      hasPinnedScenes: window.innerWidth >= SCENE_BREAKPOINT,
       isPhone: window.innerWidth < PHONE_BREAKPOINT
     };
     var ticking = false;
@@ -752,6 +778,7 @@
       env.vh = window.innerHeight;
       env.scrollY = window.scrollY || window.pageYOffset || 0;
       env.isDesktop = env.vw >= DESKTOP_BREAKPOINT;
+      env.hasPinnedScenes = env.vw >= SCENE_BREAKPOINT;
       env.isPhone = env.vw < PHONE_BREAKPOINT;
     }
 

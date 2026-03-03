@@ -53089,3 +53089,131 @@ html {
     justify-content: center;
   }
 }
+
+@media only screen and (min-width:768px) and (max-width:1279px) {
+  section.container {
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  section.container .content {
+    flex-direction: row;
+    height: 100%;
+    width: auto;
+  }
+
+  section.container .content .brand {
+    flex-direction: row;
+  }
+
+  section.container .content .brand .left {
+    height: 100%;
+  }
+
+  section.container .content .brand .copy {
+    height: 100vh;
+    margin-left: var(--scene-brand-width, clamp(320px, 44vw, 500px));
+    margin-top: 0;
+    padding: 48px;
+    width: calc(100vw - var(--scene-brand-width, clamp(320px, 44vw, 500px)));
+  }
+
+  section.container .content .intro {
+    padding: 48px;
+    width: 50vw;
+  }
+
+  section.container .content .thirds {
+    height: 100%;
+    padding: 48px;
+    width: min(76vw, 760px);
+  }
+
+  section.container .content .page {
+    height: 100%;
+    width: 100vw;
+  }
+
+  section.container .content .block {
+    gap: 48px;
+    padding-right: 48px;
+  }
+
+  .mimicmo .content .page.page-3,
+  .mentorcam .content .page.page-4,
+  section.aston-martin .content .page.page-4,
+  .lamborghini .content .page.page-4,
+  section.container.professional .content {
+    height: 100%;
+  }
+
+  section.slide.brands .wrapper {
+    height: 100%;
+    justify-content: center;
+  }
+
+  section.aston-martin .content .page.page-4 .carousel,
+  .lamborghini .content .page.page-4 .carousel {
+    align-self: flex-start;
+    height: auto;
+    justify-content: flex-start;
+  }
+
+  .mentorcam .content .brand .copy .logos {
+    bottom: 48px;
+    width: calc(100% - 96px);
+  }
+
+  section.container.professional .content .thirds.copy,
+  section.container.professional .content .thirds.startups {
+    width: var(--professional-panel-width, clamp(360px, 40vw, 520px));
+  }
+
+  section.container.professional .content .thirds.startups {
+    left: calc(100vw - var(--professional-panel-width, clamp(360px, 40vw, 520px)));
+    position: absolute;
+    visibility: hidden;
+  }
+
+  section.container.professional .content .page.video {
+    height: calc(100% - 140px);
+    left: var(--professional-panel-width, clamp(360px, 40vw, 520px));
+    position: absolute;
+    width: 100vw;
+  }
+
+  section.container.professional .content .page.video .holder {
+    gap: 48px;
+    padding: 48px;
+  }
+
+  section.container.professional .content .page.video .logos {
+    padding: 48px;
+  }
+}
+
+@media only screen and (min-width:768px) and (max-width:959px) {
+  section.container .content .brand .copy,
+  section.container .content .intro,
+  section.container .content .thirds,
+  section.container.professional .content .page.video .holder,
+  section.container.professional .content .page.video .logos {
+    padding: 36px;
+  }
+
+  section.container .content .block {
+    gap: 36px;
+    padding-right: 36px;
+  }
+
+  .mentorcam .content .brand .copy .logos {
+    bottom: 36px;
+    width: calc(100% - 72px);
+  }
+
+  section.aston-martin .content .page.page-4 .carousel,
+  .lamborghini .content .page.page-4 .carousel {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
