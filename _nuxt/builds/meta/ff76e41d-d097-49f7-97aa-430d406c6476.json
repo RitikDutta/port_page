@@ -1,0 +1,11 @@
+{
+  "id": "ff76e41d-d097-49f7-97aa-430d406c6476",
+  "prerendered": [
+    "/"
+  ],
+  "matcher": {
+    "static": {},
+    "dynamic": {},
+    "wildcard": {}
+  }
+}
