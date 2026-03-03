@@ -53346,6 +53346,31 @@ section.aston-martin .content .page.page-1 .shared-video video {
   width: 100%;
 }
 
+section.aston-martin .content .page.page-1 .page-title-overlay {
+  align-items: flex-end;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.16) 36%, rgba(0, 0, 0, 0.82) 100%);
+  bottom: 0;
+  display: flex;
+  left: 0;
+  padding: clamp(28px, 4vw, 56px);
+  right: 0;
+  top: 0;
+  position: absolute;
+  z-index: 2;
+}
+
+section.aston-martin .content .page.page-1 .page-title-overlay h2 {
+  color: #fff;
+  font-size: clamp(34px, 5vw, 72px);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.92;
+  margin: 0;
+  max-width: 100%;
+  text-shadow: 0 18px 42px rgba(0, 0, 0, 0.45);
+  width: 100%;
+}
+
 section.container .content .brand .left > svg {
   display: none;
 }
@@ -53498,6 +53523,10 @@ section.container.professional .content .page.video .logos .item .reveal-mark {
 @media only screen and (max-width: 479px) {
   section.aston-martin .content .page.page-1 {
     height: 100vh !important;
+  }
+
+  section.aston-martin .content .page.page-1 .page-title-overlay {
+    padding: 24px;
   }
 
   .project-wordmark {
