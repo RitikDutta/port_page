@@ -53083,4 +53083,9 @@ html {
     height: auto;
     justify-content: flex-start;
   }
+
+  section.slide.brands .wrapper {
+    height: 100%;
+    justify-content: center;
+  }
 }
