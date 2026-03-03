@@ -53457,14 +53457,6 @@ section.container.professional .content .page.video .logos .item .reveal-mark {
   white-space: nowrap;
 }
 
-.founder-grid {
-  display: grid;
-  gap: 12px;
-  grid-template-columns: 1fr;
-  margin-top: 20px;
-  width: 100%;
-}
-
 .thirds.copy.flex-vertical.startups > .logos {
   display: none;
 }
