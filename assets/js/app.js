@@ -68,16 +68,25 @@
       return 0;
     }
 
-    var items = Array.from(carousel.children).filter(function (item) {
+    var items = Array.from(carousel.querySelectorAll(".shadow-large, .shadow-medium")).filter(function (item) {
       return item && item.nodeType === 1 && item.getClientRects().length > 0;
     });
 
     if (items.length < 2) {
-      return 0;
+      items = Array.from(carousel.children).filter(function (item) {
+        return item && item.nodeType === 1 && item.getClientRects().length > 0;
+      });
     }
 
-    var firstTop = items[0].getBoundingClientRect().top;
-    var lastTop = items[items.length - 1].getBoundingClientRect().top;
+    if (items.length < 2) {
+      return Math.max(0, Math.ceil(carousel.scrollHeight - carousel.clientHeight));
+    }
+
+    var tops = items.map(function (item) {
+      return item.getBoundingClientRect().top;
+    });
+    var firstTop = Math.min.apply(Math, tops);
+    var lastTop = Math.max.apply(Math, tops);
 
     return Math.max(0, Math.ceil(lastTop - firstTop));
   }
@@ -687,8 +696,8 @@
     var scenes = [
       createIntroScene(document.getElementById("introduction"), introVideo),
       createHorizontalScene(document.getElementById("aston-martin"), { carouselSelector: ".page.page-4 .carousel" }),
-      createHorizontalScene(document.getElementById("mimicmo")),
-      createHorizontalScene(document.getElementById("mentorcam")),
+      createHorizontalScene(document.getElementById("mimicmo"), { carouselSelector: ".page.page-3 .carousel" }),
+      createHorizontalScene(document.getElementById("mentorcam"), { carouselSelector: ".page.page-4 .carousel" }),
       createHorizontalScene(document.getElementById("lamborghini"), { carouselSelector: ".page.page-4 .carousel" }),
       createBrandsScene(document.getElementById("brands")),
       createProfessionalScene(document.getElementById("professional"))
