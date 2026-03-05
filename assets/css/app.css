@@ -40,52 +40,23 @@
      overflow: hidden;
      width: 100%;
 }
- @media only screen and (max-width: 1279px) {
-    section.container {
-        flex-direction: column;
-         height: auto;
-         overflow-x: hidden;
-    }
-}
  section.container .content {
     display: flex;
      flex-direction: row;
      height: 100%;
      position: relative;
 }
- @media only screen and (max-width: 1279px) {
-    section.container .content {
-        flex-direction: column;
-         height: auto;
-         width: 100%;
-    }
-}
  section.container .content .brand {
     display: flex;
      flex-direction: row;
 }
- @media only screen and (max-width: 1279px) {
-    section.container .content .brand {
-        flex-direction: column;
-    }
-}
  section.container .content .brand .copy, section.container .content .brand .left {
     width: 50%;
-}
- @media only screen and (max-width: 479px) {
-    section.container .content .brand .copy, section.container .content .brand .left {
-        width: 100%;
-    }
 }
  section.container .content .brand .left {
     height: 100%;
      position: absolute;
      width: 100%;
-}
- @media only screen and (max-width: 1279px) {
-    section.container .content .brand .left {
-        height: 100vh;
-    }
 }
  section.container .content .brand .copy {
     height: 100vh;
@@ -93,20 +64,6 @@
      margin-left: 500px;
      padding: 80px;
      width: calc(-500px + 100vw);
-}
- @media only screen and (max-width: 1279px) {
-    section.container .content .brand .copy {
-        height: 100%;
-         margin-left: 0px;
-         margin-top: 50vh;
-         padding: 50px;
-         width: 100%;
-    }
-}
- @media only screen and (max-width: 479px) {
-    section.container .content .brand .copy {
-        padding: 25px;
-    }
 }
  section.container .content .thirds {
     display: flex;
@@ -116,33 +73,10 @@
      padding: 80px;
      width: 960px;
 }
- @media only screen and (max-width: 1279px) {
-    section.container .content .thirds {
-        height: 80vh;
-         padding: 50px;
-         width: 100%;
-    }
-}
- @media only screen and (max-width: 479px) {
-    section.container .content .thirds {
-        padding: 25px;
-    }
-}
  section.container .content .page {
     flex-shrink: 0;
      height: 100%;
      width: 100vw;
-}
- @media only screen and (max-width: 1279px) {
-    section.container .content .page {
-        height: 100vh;
-         width: 100%;
-    }
-}
- @media only screen and (max-width: 479px) {
-    section.container .content .page.media {
-        height: 100vw;
-    }
 }
  section.container .content .page.media .shared-video {
     display: flex;
@@ -191,15 +125,6 @@
      padding-left: 30px;
      padding-right: 30px;
 }
- @media only screen and (max-width: 479px) {
-    .button.small {
-        border-radius: 24px;
-         font-size: 16px;
-         height: 36px;
-         padding-left: 20px;
-         padding-right: 20px;
-    }
-}
  .button.large {
     border-radius: 32px;
      font-size: 24px;
@@ -208,35 +133,13 @@
      padding-left: 40px;
      padding-right: 40px;
 }
- @media only screen and (max-width: 479px) {
-    .button.large {
-        border-radius: 28px;
-         font-size: 22px;
-         height: 56px;
-         opacity: 1;
-         padding-left: 30px;
-         padding-right: 30px;
-    }
-}
  .button.white {
     border: 1px solid rgba(255, 255, 255, 0.25);
      color: rgb(255, 255, 255);
 }
- @media screen and (min-width: 1279px) {
-    .button.white:hover {
-        background: rgb(255, 255, 255);
-         color: rgb(0, 0, 0);
-    }
-}
  .button.black {
     border: 1px solid rgba(0, 0, 0, 0.25);
      color: rgb(0, 0, 0);
-}
- @media screen and (min-width: 1279px) {
-    .button.black:hover {
-        background: rgb(0, 0, 0);
-         color: rgb(255, 255, 255);
-    }
 }
  video {
     background: rgb(244, 244, 244);
@@ -291,11 +194,6 @@
  a {
     display: flex;
 }
- @media only screen and (max-width: 479px) {
-    .hide-on-mobile {
-        display: none !important;
-    }
-}
  body, html {
     color: rgb(97, 97, 97);
      -webkit-font-smoothing: antialiased;
@@ -312,13 +210,6 @@
      letter-spacing: -1.7px;
      line-height: 84px;
 }
- @media only screen and (max-width: 479px) {
-    h1 {
-        font-size: 44px;
-         letter-spacing: -1.2px;
-         line-height: 50px;
-    }
-}
  .h1 {
     color: rgb(21, 21, 21);
      font-family: Circular, "Helvetica Neue", sans-serif !important;
@@ -326,13 +217,6 @@
      font-weight: 300 !important;
      letter-spacing: -1.7px !important;
      line-height: 84px !important;
-}
- @media only screen and (max-width: 479px) {
-    .h1 {
-        font-size: 44px !important;
-         letter-spacing: -1.2px !important;
-         line-height: 50px !important;
-    }
 }
  h2 {
     color: rgb(21, 21, 21);
@@ -342,13 +226,6 @@
      letter-spacing: -1.6px;
      line-height: 56px;
 }
- @media only screen and (max-width: 479px) {
-    h2 {
-        font-size: 36px;
-         letter-spacing: -0.8px;
-         line-height: 40px;
-    }
-}
  h3 {
     color: rgb(21, 21, 21);
      font-family: Circular, "Helvetica Neue", sans-serif;
@@ -356,13 +233,6 @@
      font-weight: 300;
      letter-spacing: -0.2px;
      line-height: 36px;
-}
- @media only screen and (max-width: 479px) {
-    h3 {
-        font-size: 22px;
-         letter-spacing: -0.2px;
-         line-height: 26px;
-    }
 }
  a, li, p, ul {
     color: rgb(97, 97, 97);
@@ -377,13 +247,6 @@
     font-size: 24px;
      letter-spacing: -0.5px;
      line-height: 31px;
-}
- @media only screen and (max-width: 479px) {
-    p.medium {
-        font-size: 20px;
-         letter-spacing: -0.22px;
-         line-height: 24px;
-    }
 }
  main hr {
     border-width: 1px 0px 0px;
@@ -420,12 +283,6 @@
      position: absolute;
      top: 0px;
 }
- @media only screen and (max-width: 1279px) {
-    header .header-logo {
-        margin-left: 20px;
-         margin-top: 10px;
-    }
-}
  header .header-hamburger {
     margin-right: 30px;
      margin-top: 30px;
@@ -435,25 +292,8 @@
      top: 0px;
      z-index: 101;
 }
- @media only screen and (max-width: 1279px) {
-    header .header-hamburger {
-        margin-right: 20px;
-         margin-top: 10px;
-    }
-}
  header .trigger {
     transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
-}
- @media only screen and (max-width: 1279px) {
-    header .trigger {
-        backdrop-filter: blur(30px);
-         background: rgba(255, 255, 255, 0.75);
-         display: flex;
-         height: 64px;
-         opacity: 0;
-         pointer-events: none;
-         width: 100%;
-    }
 }
  header .clickoutside {
     background: rgb(0, 0, 0);
@@ -483,25 +323,6 @@
      top: 0px;
      transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1);
 }
- @media only screen and (max-height: 768px) {
-    header nav {
-        padding: 40px;
-    }
-}
- @media only screen and (max-width: 1279px) {
-    header nav {
-        padding: 60px;
-    }
-}
- @media only screen and (max-width: 479px) {
-    header nav {
-        align-items: flex-start;
-         clip-path: circle(24px at 100% 40px);
-         opacity: 0;
-         padding: 64px 0px 0px;
-         width: 100%;
-    }
-}
  header nav ul {
     color: inherit;
      font-family: inherit;
@@ -512,34 +333,17 @@
     gap: 40px;
 }
  @media only screen and (max-height: 768px) {
+
+    header nav {
+        padding: 40px;
+    }
+
     header nav ul.main {
         gap: 0px;
     }
 }
- @media only screen and (max-width: 479px) {
-    header nav ul.main {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-         flex-direction: column;
-         gap: 20px;
-         height: 100%;
-         max-height: fit-content;
-         overflow-y: auto;
-         padding: 25px;
-         width: 100%;
-    }
-}
  header nav ul.main li.item {
     width: 360px;
-}
- @media only screen and (max-width: 1279px) {
-    header nav ul.main li.item {
-        width: 300px;
-    }
-}
- @media only screen and (max-width: 479px) {
-    header nav ul.main li.item {
-        width: 100%;
-    }
 }
  header nav ul.main li.item p.large {
     color: rgba(255, 255, 255, 0.5);
@@ -547,13 +351,6 @@
      letter-spacing: -0.5px;
      margin-bottom: 10px;
      user-select: none;
-}
- @media only screen and (max-width: 479px) {
-    header nav ul.main li.item p.large {
-        font-size: 22px;
-         margin-bottom: 0px;
-         margin-left: 10px;
-    }
 }
  header nav ul.main li.item ul.sub li {
     width: auto;
@@ -582,12 +379,6 @@
      padding: 6px 20px;
      transition: 0.2s ease-out;
 }
- @media only screen and (max-width: 479px) {
-    header nav ul.sub li a {
-        margin-left: -25px;
-         padding: 6px 35px;
-    }
-}
  header nav ul.sub li a span {
     transition: inherit;
 }
@@ -595,42 +386,16 @@
     font-size: 48px;
      letter-spacing: -0.5px;
 }
- @media only screen and (max-width: 479px) {
-    header nav ul.sub li a span:first-child {
-        font-size: 34px;
-    }
-}
- @media screen and (min-width: 1279px) {
-    header nav ul.sub li a:hover span:first-child {
-        opacity: 0.5;
-    }
-}
  header nav .bottom {
     align-items: center;
      justify-content: space-between;
      width: 100%;
 }
- @media only screen and (max-width: 479px) {
-    header nav .bottom {
-        gap: 20px;
-         padding: 20px;
-    }
-}
  header nav .bottom .cta {
     display: flex;
 }
- @media only screen and (max-width: 479px) {
-    header nav .bottom .cta {
-        width: 100%;
-    }
-}
  header nav .bottom ul.social {
     margin: -10px;
-}
- @media only screen and (max-width: 479px) {
-    header nav .bottom ul.social {
-        margin: -5px;
-    }
 }
  header nav .bottom ul.social li a {
     align-items: center;
@@ -641,31 +406,6 @@
      opacity: 0.5;
      transition: 0.2s ease-out;
      width: 50px;
-}
- @media only screen and (max-width: 479px) {
-    header nav .bottom ul.social li a {
-        height: 40px;
-         width: 40px;
-    }
-}
- @media screen and (min-width: 1279px) {
-    header nav .bottom ul.social li a:hover {
-        opacity: 1;
-    }
-}
- @media only screen and (max-width: 479px) {
-    header.scroll .trigger {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-         opacity: 1;
-    }
-}
- @media only screen and (max-width: 479px) {
-    header.open .header-logo {
-        z-index: 102;
-    }
-    header.open .header-logo span {
-        color: rgb(255, 255, 255);
-    }
 }
  header.open .clickoutside {
     opacity: 0.25;
@@ -684,11 +424,6 @@
      gap: 10px;
      transition: 0.4s cubic-bezier(0.19, 1, 0.22, 1);
 }
- @media only screen and (max-width: 1279px) {
-    .header-logo {
-        gap: 6px;
-    }
-}
  .header-logo video {
     border-radius: 50%;
      display: flex;
@@ -698,12 +433,6 @@
      overflow: hidden;
      transform: scale(0.2);
      width: 70px;
-}
- @media only screen and (max-width: 1279px) {
-    .header-logo video {
-        height: 44px;
-         width: 44px;
-    }
 }
  .header-logo span, .header-logo video {
     transition: 1.4s cubic-bezier(0.19, 1, 0.22, 1);
@@ -717,22 +446,11 @@
      letter-spacing: -0.02em !important;
      line-height: 24px !important;
 }
- @media only screen and (max-width: 1279px) {
-    .header-logo span {
-        font-size: 20px !important;
-         transform: translateX(-50px);
-    }
-}
  .header-logo.black span {
     color: rgb(0, 0, 0);
 }
  .header-logo.white span {
     color: rgb(255, 255, 255);
-}
- @media only screen and (max-width: 1279px) {
-    .header-logo.white span {
-        color: rgb(0, 0, 0);
-    }
 }
  .header-logo.visible span {
     transform: translateX(0px);
@@ -759,25 +477,12 @@
      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
      width: 52px;
 }
- @media only screen and (max-width: 1279px) {
-    .header-hamburger .container {
-        height: 44px;
-         width: 44px;
-    }
-}
  .header-hamburger svg rect {
     transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
  .header-hamburger svg.close-icon {
     opacity: 0;
      position: absolute;
-}
- @media screen and (min-width: 1279px) {
-    .header-hamburger:hover .container {
-        height: 56px;
-         transform: translate(2px, -2px);
-         width: 56px;
-    }
 }
  .header-hamburger.open {
     transform: rotate(-45deg);
@@ -790,12 +495,6 @@
 }
  .header-hamburger.open svg.open-icon {
     opacity: 0;
-}
- @media screen and (min-width: 1279px) {
-    .header-hamburger.open:hover .container {
-        background: rgba(255, 255, 255, 0.1);
-         transform: translate(2px);
-    }
 }
  .mouse-wheel {
     border: 2px solid rgb(0, 0, 0);
@@ -818,11 +517,6 @@
      margin-top: 8px;
      width: 4px;
 }
- @media only screen and (max-width: 1279px) {
-    .mouse-wheel {
-        display: none;
-    }
-}
  section.introduction {
     align-items: center;
      display: flex;
@@ -832,11 +526,6 @@
      overflow: hidden;
      width: 100%;
 }
- @media only screen and (max-width: 479px) {
-    section.introduction {
-        height: auto;
-    }
-}
  section.introduction .content {
     align-items: center;
      display: flex;
@@ -845,24 +534,11 @@
      height: 100%;
      position: relative;
 }
- @media only screen and (max-width: 479px) {
-    section.introduction .content {
-        flex-direction: column;
-         gap: 0px;
-         height: auto;
-    }
-}
  section.introduction .video {
     height: 100%;
      overflow: hidden;
      position: absolute;
      width: 100vw;
-}
- @media only screen and (max-width: 479px) {
-    section.introduction .video {
-        height: 70vh;
-         position: relative;
-    }
 }
  section.introduction .video .play-pause {
     opacity: 0;
@@ -877,11 +553,6 @@
      position: absolute;
      transform: translateX(-50%);
      z-index: 10;
-}
- @media only screen and (max-width: 1279px) {
-    section.introduction .video .play-pause .icon-play-pause {
-        bottom: 20px;
-    }
 }
  section.introduction .video.play {
     cursor: pointer;
@@ -920,25 +591,11 @@
      vertical-align: middle;
      white-space: nowrap;
 }
- @media only screen and (max-width: 479px) {
-    section.introduction h1 {
-        align-items: flex-start;
-         flex-direction: column;
-         justify-content: flex-start;
-         padding: 25px;
-         width: 100%;
-    }
-}
  section.introduction h1 .first, section.introduction h1 .second, section.introduction h1 .third {
     align-items: center;
      display: flex;
      flex-direction: row;
      max-width: 100%;
-}
- @media only screen and (max-width: 479px) {
-    section.introduction h1 .first, section.introduction h1 .second, section.introduction h1 .third {
-        display: flex;
-    }
 }
  section.introduction h1 .first u {
     border-bottom: 3px solid rgb(0, 0, 0);
@@ -964,21 +621,9 @@
      padding-left: 40px;
      padding-right: 40px;
 }
- @media only screen and (max-width: 479px) {
-    section.introduction h1 .second .y-combinator {
-        height: 80px;
-         margin: 15px 0px 10px;
-         width: 100%;
-    }
-}
  section.introduction h1 .second .y-combinator svg {
     height: 50px;
      width: auto;
-}
- @media only screen and (max-width: 479px) {
-    section.introduction h1 .second .y-combinator svg {
-        height: 40px;
-    }
 }
  section.introduction h1 .third .aston-martin, section.introduction h1 .third .lamborghini {
     align-items: center;
@@ -991,13 +636,6 @@
      position: relative;
      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
      width: 260px;
-}
- @media only screen and (max-width: 479px) {
-    section.introduction h1 .third .aston-martin, section.introduction h1 .third .lamborghini {
-        margin-left: 0px;
-         margin-top: 15px;
-         width: 100%;
-    }
 }
  section.introduction h1 .third .aston-martin .logo-holder, section.introduction h1 .third .lamborghini .logo-holder {
     align-items: center;
@@ -1021,14 +659,6 @@
      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
      width: 100%;
 }
- @media screen and (min-width: 1279px) {
-    section.introduction h1 .third .aston-martin:hover, section.introduction h1 .third .lamborghini:hover {
-        transform: scale(1.07);
-    }
-    section.introduction h1 .third .aston-martin:hover svg, section.introduction h1 .third .lamborghini:hover svg {
-        transform: scale(1.05);
-    }
-}
  section.introduction h1 .third .lamborghini video {
     transform: scale(1.15);
 }
@@ -1039,41 +669,9 @@
  section.introduction h1 .third .lamborghini .logo-holder .logo-lamborghini path {
     transition: fill 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
- @media screen and (min-width: 1279px) {
-    section.introduction h1 .third .lamborghini:hover .logo-holder {
-        background: rgb(249, 200, 94);
-    }
-    section.introduction h1 .third .lamborghini:hover .logo-holder .logo-lamborghini path {
-        fill: rgb(0, 0, 0);
-    }
-}
  section.introduction h1 .third .aston-martin .logo-holder .logo-aston-martin {
     height: 44px;
      width: auto;
-}
- @media screen and (min-width: 1279px) {
-    section.introduction h1 .third .aston-martin:hover .logo-holder {
-        background: rgb(1, 102, 94);
-    }
-}
- @media only screen and (max-width: 479px) {
-    section.introduction h1 .third .aston-martin {
-        margin-top: 20px;
-    }
-}
- @media only screen and (max-width: 479px) {
-    section.introduction h1 .second, section.introduction h1 .third {
-        align-items: flex-start;
-         flex-direction: column;
-         width: 100%;
-    }
-    section.introduction h1 .third {
-        display: flex;
-         justify-content: flex-start;
-    }
-    section.introduction h1 .first, section.introduction h1 .second, section.introduction h1 .third {
-        display: inline;
-    }
 }
  .icon-play-pause {
     align-items: center;
@@ -1098,12 +696,6 @@
  .icon-play-pause .cta .play {
     margin-left: 4px;
 }
- @media screen and (min-width: 1279px) {
-    .icon-play-pause:hover .cta {
-        background-color: rgba(0, 0, 0, 0.8);
-         transform: scale(1.1);
-    }
-}
  .icon-play-pause p {
     color: rgb(255, 255, 255);
      font-size: 24px;
@@ -1111,12 +703,6 @@
 }
  .icon-play-pause p span {
     opacity: 0.75;
-}
- @media only screen and (max-width: 479px) {
-    .logo-ycombinator {
-        height: 24px;
-         width: auto;
-    }
 }
  .logo-lamborghini.white path {
     fill: rgb(255, 255, 255);
@@ -1134,56 +720,18 @@
      padding-bottom: 75px;
      padding-top: 75px;
 }
- @media only screen and (max-width: 1279px) {
-    section.aston-martin .content .page.page-4 {
-        height: auto;
-         padding-bottom: 60px;
-         padding-top: 60px;
-    }
-}
  section.aston-martin .content .page.page-4 .carousel {
     align-items: center;
      gap: 50px;
      width: auto;
-}
- @media only screen and (max-width: 1279px) {
-    section.aston-martin .content .page.page-4 .carousel {
-        padding-left: 50px;
-         padding-right: 50px;
-    }
-}
- @media only screen and (max-width: 479px) {
-    section.aston-martin .content .page.page-4 .carousel {
-        gap: 25px;
-         padding-left: 25px;
-         padding-right: 25px;
-         width: 100%;
-    }
 }
  section.aston-martin .content .page.page-4 .carousel .phones {
     gap: 10px;
      justify-content: space-between;
      width: 100%;
 }
- @media only screen and (max-width: 479px) {
-    section.aston-martin .content .page.page-4 .carousel .phones {
-        gap: 20px;
-    }
-}
  section.aston-martin .content .page.page-4 .carousel .phones .shadow-large {
     width: 100%;
-}
- @media only screen and (max-width: 479px) {
-    section.aston-martin .content .page.page-4 .carousel .phones .shadow-large:last-child {
-        display: none;
-    }
-    section.aston-martin .content .page.page-4 .carousel .phone-holder {
-        height: auto !important;
-         width: 100% !important;
-    }
-    section.aston-martin .content .page.page-4 .carousel .shadow-medium {
-        width: 100%;
-    }
 }
  section.aston-martin .content .page.page-4 .carousel .phone-holder.item, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.shared-video {
     background: rgb(255, 255, 255);
@@ -1205,35 +753,11 @@
  section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone.shared-video {
     border-radius: 30px;
 }
- @media only screen and (max-width: 479px) {
-    section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone.shared-video {
-        border-radius: 20px;
-         width: 100%;
-    }
-}
  section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone .video, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone img, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone video, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone.shared-video .video, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone.shared-video img, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone.shared-video video {
     aspect-ratio: 0.461458 / 1;
 }
- @media only screen and (max-width: 479px) {
-    section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone .video, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone img, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone video, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone.shared-video .video, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone.shared-video img, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone.shared-video video {
-        height: auto;
-         width: 100%;
-    }
-}
- @media only screen and (max-width: 479px) {
-    section.aston-martin .content .page.page-4 .carousel .phone-holder.item.desktop, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.desktop.shared-video {
-        border-radius: 6px;
-         width: 100%;
-    }
-}
  section.aston-martin .content .page.page-4 .carousel .phone-holder.item.desktop .video, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.desktop img, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.desktop video, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.desktop.shared-video .video, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.desktop.shared-video img, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.desktop.shared-video video {
     aspect-ratio: 1.45015 / 1;
-}
- @media only screen and (max-width: 479px) {
-    section.aston-martin .content .page.page-4 .carousel .phone-holder.item.desktop .video, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.desktop img, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.desktop video, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.desktop.shared-video .video, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.desktop.shared-video img, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.desktop.shared-video video {
-        height: auto;
-         width: 100%;
-    }
 }
  section.aston-martin .content .brand .left {
     background: rgb(1, 102, 94);
@@ -1241,11 +765,6 @@
  section.aston-martin .content .brand .left svg {
     height: 64px;
      width: auto;
-}
- @media only screen and (max-width: 479px) {
-    section.aston-martin .content .brand .left svg {
-        height: 52px;
-    }
 }
  .shared-video {
     position: relative;
@@ -1265,11 +784,6 @@
     overflow: hidden;
      position: relative;
 }
- @media only screen and (max-width: 1279px) {
-    .mimicmo .content .page.page-3 {
-        height: auto;
-    }
-}
  .mimicmo .content .brand .left {
     background: rgb(223, 243, 3);
 }
@@ -1277,45 +791,17 @@
     height: 56px;
      width: auto;
 }
- @media only screen and (max-width: 479px) {
-    .mimicmo .content .brand .left svg {
-        height: 40px;
-    }
-}
  .carousel {
     gap: 60px;
      height: 100%;
      justify-content: center;
      width: 100%;
 }
- @media only screen and (max-width: 1279px) {
-    .carousel {
-        gap: 0px;
-         height: auto;
-         justify-content: space-between;
-         padding: 60px;
-    }
-}
- @media only screen and (max-width: 479px) {
-    .carousel {
-        align-items: center;
-         flex-direction: column;
-         gap: 30px;
-    }
-}
  .carousel .column {
     box-sizing: content-box;
      gap: 30px;
      padding-bottom: 100px;
      padding-top: 100px;
-}
- @media only screen and (max-width: 1279px) {
-    .carousel .column {
-        flex-shrink: 1;
-         height: auto;
-         padding-bottom: 0px;
-         padding-top: 0px;
-    }
 }
  .carousel .column .item, .carousel .column .item.shared-video {
     background: rgb(255, 255, 255);
@@ -1330,32 +816,11 @@
      width: auto;
      will-change: filter;
 }
- @media only screen and (max-width: 479px) {
-    .carousel .column .item, .carousel .column .item.shared-video {
-        border-radius: 25px;
-    }
-}
  .carousel .column .item .video, .carousel .column .item img, .carousel .column .item video, .carousel .column .item.shared-video .video, .carousel .column .item.shared-video img, .carousel .column .item.shared-video video {
     aspect-ratio: 0.461448 / 1;
      height: calc(-200px + 100vh);
      object-fit: cover;
      width: auto;
-}
- @media only screen and (max-width: 1279px) {
-    .carousel .column .item .video, .carousel .column .item img, .carousel .column .item video, .carousel .column .item.shared-video .video, .carousel .column .item.shared-video img, .carousel .column .item.shared-video video {
-        height: auto;
-         width: 25vw;
-    }
-}
- @media only screen and (max-width: 479px) {
-    .carousel .column .item .video, .carousel .column .item img, .carousel .column .item video, .carousel .column .item.shared-video .video, .carousel .column .item.shared-video img, .carousel .column .item.shared-video video {
-        width: 70vw;
-    }
-}
- @media only screen and (max-width: 479px) {
-    .carousel .column:last-child {
-        display: none;
-    }
 }
  .mentorcam {
     background: rgb(249, 249, 249);
@@ -1372,11 +837,6 @@
     height: 56px;
      width: auto;
 }
- @media only screen and (max-width: 479px) {
-    .mentorcam .content .brand .left svg {
-        height: 42px;
-    }
-}
  .mentorcam .content .brand .copy {
     position: relative;
 }
@@ -1387,53 +847,14 @@
      position: absolute;
      width: calc(100% - 160px);
 }
- @media only screen and (max-width: 479px) {
-    .mentorcam .content .brand .copy .logos {
-        bottom: 20px;
-         gap: 15px;
-         width: calc(100% - 50px);
-    }
-    .mentorcam .content .brand .copy .logos p {
-        display: none;
-    }
-}
  .mentorcam .content .brand .copy .logos .logo-angelist {
     margin-top: 5px;
-}
- @media only screen and (max-width: 479px) {
-    .mentorcam .content .brand .copy .logos .logo-angelist {
-        display: none;
-         flex-shrink: 1;
-    }
 }
  .mentorcam .content .page.page-4 {
     background: rgb(245, 245, 245);
 }
- @media only screen and (max-width: 1279px) {
-    .mentorcam .content .page.page-4 {
-        height: auto;
-    }
-}
  .logo-mentorcam.white path {
     fill: rgb(255, 255, 255);
-}
- @media only screen and (max-width: 479px) {
-    .logo-general-catalyst {
-        height: 34px;
-         width: auto;
-    }
-}
- @media only screen and (max-width: 479px) {
-    .logo-angelist {
-        height: 20px;
-         width: auto;
-    }
-}
- @media only screen and (max-width: 479px) {
-    .logo-goodwater {
-        height: 18px;
-         width: auto;
-    }
 }
  .lamborghini {
     background: rgb(254, 250, 241);
@@ -1449,51 +870,16 @@
     height: 64px;
      width: auto;
 }
- @media only screen and (max-width: 479px) {
-    .lamborghini .content .brand .left svg {
-        height: 42px;
-    }
-}
  .lamborghini .content .page.page-4 {
     display: flex;
      justify-content: center;
      padding-bottom: 75px;
      padding-top: 75px;
 }
- @media only screen and (max-width: 1279px) {
-    .lamborghini .content .page.page-4 {
-        height: auto;
-         padding-bottom: 60px;
-         padding-top: 60px;
-    }
-}
  .lamborghini .content .page.page-4 .carousel {
     align-items: center;
      gap: 50px;
      width: auto;
-}
- @media only screen and (max-width: 1279px) {
-    .lamborghini .content .page.page-4 .carousel {
-        padding-left: 50px;
-         padding-right: 50px;
-    }
-}
- @media only screen and (max-width: 479px) {
-    .lamborghini .content .page.page-4 .carousel {
-        gap: 25px;
-         padding-left: 25px;
-         padding-right: 25px;
-         width: 100%;
-    }
-    .lamborghini .content .page.page-4 .carousel .shadow-medium {
-        width: 100%;
-    }
-}
- @media only screen and (max-width: 479px) {
-    .lamborghini .content .page.page-4 .carousel .phone-holder, .lamborghini .content .page.page-4 .carousel .phone-holder {
-        height: auto !important;
-         width: 100% !important;
-    }
 }
  .lamborghini .content .page.page-4 .carousel .item, .lamborghini .content .page.page-4 .carousel .item {
     background: rgb(255, 255, 255);
@@ -1512,19 +898,8 @@
     height: calc(-150px + 100vh);
      width: auto;
 }
- @media only screen and (max-width: 479px) {
-    .lamborghini .content .page.page-4 .carousel .item.desktop, .lamborghini .content .page.page-4 .carousel .item.desktop {
-        border-radius: 6px;
-    }
-}
  .lamborghini .content .page.page-4 .carousel .item.desktop .video, .lamborghini .content .page.page-4 .carousel .item.desktop img, .lamborghini .content .page.page-4 .carousel .item.desktop video, .lamborghini .content .page.page-4 .carousel .item.desktop .video, .lamborghini .content .page.page-4 .carousel .item.desktop img, .lamborghini .content .page.page-4 .carousel .item.desktop video {
     aspect-ratio: 1.50628 / 1;
-}
- @media only screen and (max-width: 479px) {
-    .lamborghini .content .page.page-4 .carousel .item.desktop .video, .lamborghini .content .page.page-4 .carousel .item.desktop img, .lamborghini .content .page.page-4 .carousel .item.desktop video, .lamborghini .content .page.page-4 .carousel .item.desktop .video, .lamborghini .content .page.page-4 .carousel .item.desktop img, .lamborghini .content .page.page-4 .carousel .item.desktop video {
-        height: auto;
-         width: 100%;
-    }
 }
  section.slide.brands {
     background: rgb(255, 255, 255);
@@ -1541,35 +916,14 @@
      overflow: hidden;
      width: 100%;
 }
- @media only screen and (max-width: 479px) {
-    section.slide.brands {
-        flex-direction: column;
-         gap: 25px;
-         justify-content: center;
-         padding: 64px 25px 25px;
-    }
-}
  section.slide.brands .copy {
     padding-left: 80px;
      padding-right: 80px;
-}
- @media only screen and (max-width: 479px) {
-    section.slide.brands .copy {
-        padding: 0px;
-    }
 }
  section.slide.brands .logos {
     gap: 10px;
      padding-left: 80px;
      padding-right: 80px;
-}
- @media only screen and (max-width: 479px) {
-    section.slide.brands .logos {
-        display: grid;
-         grid-template-columns: 1fr 1fr;
-         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-         padding: 0px;
-    }
 }
  section.slide.brands .logos .holder {
     align-items: center;
@@ -1585,13 +939,6 @@
      padding: 10px;
      position: relative;
      width: 280px;
-}
- @media only screen and (max-width: 479px) {
-    section.slide.brands .logos .holder {
-        border-radius: 12px;
-         height: 100%;
-         width: 100%;
-    }
 }
  section.slide.brands .logos .holder svg {
     max-height: 100%;
@@ -1630,76 +977,15 @@
     height: 70px;
      width: auto;
 }
- @media only screen and (max-width: 479px) {
-    .logo-emirates {
-        height: 44px;
-    }
-}
- @media only screen and (max-width: 479px) {
-    .logo-etihad {
-        height: 32px;
-    }
-}
  .logo-pg {
     height: 40px;
      width: auto;
-}
- @media only screen and (max-width: 479px) {
-    .logo-pg {
-        height: 26px;
-    }
-}
- @media only screen and (max-width: 479px) {
-    .logo-unilever {
-        height: 48px;
-    }
-}
- @media only screen and (max-width: 479px) {
-    .logo-mercedes {
-        height: 32px;
-         width: auto;
-    }
-}
- @media only screen and (max-width: 479px) {
-    .logo-visa {
-        height: 26px;
-         width: auto;
-    }
-}
- @media only screen and (max-width: 479px) {
-    .logo-dodge {
-        height: 16px;
-         width: auto;
-    }
-}
- @media only screen and (max-width: 479px) {
-    .logo-ford {
-        height: 32px;
-         width: auto;
-    }
-}
- @media only screen and (max-width: 479px) {
-    .logo-volvo {
-        height: 14px;
-         width: auto;
-    }
-}
- @media only screen and (max-width: 479px) {
-    .logo-pepsi {
-        height: 32px;
-         width: auto;
-    }
 }
  section.container.professional {
     background: rgb(255, 255, 255);
 }
  section.container.professional .content {
     align-items: center;
-}
- @media only screen and (max-width: 1279px) {
-    section.container.professional .content {
-        height: auto;
-    }
 }
  section.container.professional .content .thirds.startups {
     background: rgb(255, 255, 255);
@@ -1709,25 +995,12 @@
      visibility: hidden;
      z-index: 2;
 }
- @media only screen and (max-width: 1279px) {
-    section.container.professional .content .thirds.startups {
-        left: 0px;
-         position: relative;
-         visibility: visible;
-    }
-}
  section.container.professional .content .thirds.startups .logos {
     display: grid;
      gap: 10px;
      grid-template-columns: repeat(3, 1fr);
      margin-top: 30px;
      width: 100%;
-}
- @media only screen and (max-width: 479px) {
-    section.container.professional .content .thirds.startups .logos {
-        gap: 5px;
-         grid-template-columns: repeat(2, 1fr);
-    }
 }
  section.container.professional .content .thirds.startups .logos .holder {
     align-items: center;
@@ -1744,13 +1017,6 @@
      position: relative;
      width: 100%;
 }
- @media only screen and (max-width: 479px) {
-    section.container.professional .content .thirds.startups .logos .holder {
-        border-radius: 12px;
-         height: 60px;
-         width: 100%;
-    }
-}
  section.container.professional .content .thirds.startups .logos .holder svg {
     max-height: 100%;
 }
@@ -1762,14 +1028,6 @@
      overflow: hidden;
      position: absolute;
      z-index: 3;
-}
- @media only screen and (max-width: 1279px) {
-    section.container.professional .content .page.video {
-        height: 100vh;
-         left: 0px;
-         position: relative;
-         width: 100%;
-    }
 }
  section.container.professional .content .page.video .shared-video {
     height: 100%;
@@ -1789,69 +1047,14 @@
      position: absolute;
      width: 100%;
 }
- @media only screen and (max-width: 479px) {
-    section.container.professional .content .page.video .logos {
-        display: grid;
-         gap: 4px;
-         grid-template-columns: repeat(3, 1fr);
-         justify-items: center;
-         padding: 0px;
-         position: relative;
-         width: calc(100% + 20px);
-    }
-}
  section.container.professional .content .page.video .logos .item {
     align-items: center;
      display: flex;
      justify-content: center;
 }
- @media only screen and (max-width: 479px) {
-    section.container.professional .content .page.video .logos .item {
-        border-radius: 8px;
-         height: 38px;
-         width: 100%;
-    }
-}
  section.container.professional .content .page.video .logos .item svg {
     opacity: 0;
      transform: translateY(-5px);
-}
- @media only screen and (max-width: 479px) {
-    section.container.professional .content .page.video .logos .item svg {
-        transform: translateY(5px);
-    }
-    section.container.professional .content .page.video .logos .item svg.figma {
-        height: 22px;
-         width: auto;
-    }
-    section.container.professional .content .page.video .logos .item svg.vue {
-        height: 26px;
-         width: auto;
-    }
-    section.container.professional .content .page.video .logos .item svg.nuxt {
-        height: 18px;
-         width: auto;
-    }
-    section.container.professional .content .page.video .logos .item svg.react {
-        height: 24px;
-         width: auto;
-    }
-    section.container.professional .content .page.video .logos .item svg.next {
-        height: 14px;
-         width: auto;
-    }
-    section.container.professional .content .page.video .logos .item svg.mongodb {
-        height: 24px;
-         width: auto;
-    }
-    section.container.professional .content .page.video .logos .item svg.flutter {
-        height: 26px;
-         width: auto;
-    }
-    section.container.professional .content .page.video .logos .item svg.node {
-        height: 30px;
-         width: auto;
-    }
 }
  section.container.professional .content .page.video .logos .item:nth-child(7), section.container.professional .content .page.video .logos .item:nth-child(8) {
     display: none;
@@ -1867,13 +1070,6 @@
      top: 0px;
      width: 100%;
 }
- @media only screen and (max-width: 479px) {
-    section.container.professional .content .page.video .holder {
-        flex-direction: column;
-         gap: 25px;
-         padding: 25px;
-    }
-}
  section.container.professional .content .page.video .holder .title {
     gap: 10px;
      max-width: 640px;
@@ -1881,38 +1077,14 @@
      transform: translateY(-10px);
      width: 50%;
 }
- @media only screen and (max-width: 479px) {
-    section.container.professional .content .page.video .holder .title {
-        gap: 5px;
-         transform: translateY(10px);
-         width: 100%;
-    }
-}
  section.container.professional .content .page.video .holder .title h3 {
     opacity: 0.6;
 }
  section.container.professional .content .page.video .holder .title p {
     opacity: 0.7;
 }
- @media only screen and (max-width: 479px) {
-    section.container.professional .content .page.video .holder .title p {
-        font-size: 18px;
-    }
-}
  section.container.professional .content .page.video .holder .title h2, section.container.professional .content .page.video .holder .title h3, section.container.professional .content .page.video .holder .title p {
     color: rgb(255, 255, 255);
-}
- @media only screen and (max-width: 479px) {
-    .logo-sno {
-        height: 24px;
-         width: auto;
-    }
-}
- @media only screen and (max-width: 479px) {
-    .logo-techstars {
-        height: 20px;
-         width: auto;
-    }
 }
  section.contact {
     align-items: center;
@@ -1929,15 +1101,6 @@
      flex-direction: column;
      width: 100%;
 }
- @media only screen and (max-width: 479px) {
-    section.contact {
-        align-items: flex-start;
-         flex-direction: column;
-         gap: 20px;
-         justify-content: center;
-         padding: 25px;
-    }
-}
  section.contact .left {
     align-items: flex-start;
 }
@@ -1948,13 +1111,6 @@
      position: absolute;
      right: 0px;
 }
- @media only screen and (max-width: 479px) {
-    section.contact .logos {
-        gap: 10px;
-         padding: 25px;
-         width: 100%;
-    }
-}
  section.contact .logos .logo {
     background: rgba(0, 0, 0, 0.05);
      border-radius: 36px;
@@ -1964,23 +1120,62 @@
      width: 72px;
 }
  @media screen and (min-width: 1279px) {
+
+    .button.white:hover {
+        background: rgb(255, 255, 255);
+         color: rgb(0, 0, 0);
+    }
+
+    .button.black:hover {
+        background: rgb(0, 0, 0);
+         color: rgb(255, 255, 255);
+    }
+
+    header nav ul.sub li a:hover span:first-child {
+        opacity: 0.5;
+    }
+
+    header nav .bottom ul.social li a:hover {
+        opacity: 1;
+    }
+
+    .header-hamburger:hover .container {
+        height: 56px;
+         transform: translate(2px, -2px);
+         width: 56px;
+    }
+
+    .header-hamburger.open:hover .container {
+        background: rgba(255, 255, 255, 0.1);
+         transform: translate(2px);
+    }
+
+    section.introduction h1 .third .aston-martin:hover, section.introduction h1 .third .lamborghini:hover {
+        transform: scale(1.07);
+    }
+    section.introduction h1 .third .aston-martin:hover svg, section.introduction h1 .third .lamborghini:hover svg {
+        transform: scale(1.05);
+    }
+
+    section.introduction h1 .third .lamborghini:hover .logo-holder {
+        background: rgb(249, 200, 94);
+    }
+    section.introduction h1 .third .lamborghini:hover .logo-holder .logo-lamborghini path {
+        fill: rgb(0, 0, 0);
+    }
+
+    section.introduction h1 .third .aston-martin:hover .logo-holder {
+        background: rgb(1, 102, 94);
+    }
+
+    .icon-play-pause:hover .cta {
+        background-color: rgba(0, 0, 0, 0.8);
+         transform: scale(1.1);
+    }
+
     section.contact .logos .logo:hover {
         background: rgba(0, 0, 0, 0.1);
          transform: scale(1.1);
-    }
-}
- @media only screen and (max-width: 479px) {
-    section.contact .logos .logo {
-        height: 56px;
-         width: 56px;
-    }
-    section.contact .logos .logo.email svg, section.contact .logos .logo.linkedin svg {
-        height: auto;
-         width: 28px;
-    }
-    section.contact .logos .logo.instagram svg {
-        height: auto;
-         width: 30px;
     }
 }
  .header-logo span {
@@ -1993,6 +1188,171 @@
      line-height: 24px !important;
 }
  @media only screen and (max-width: 1279px) {
+
+    section.container {
+        flex-direction: column;
+         height: auto;
+         overflow-x: hidden;
+    }
+
+    section.container .content {
+        flex-direction: column;
+         height: auto;
+         width: 100%;
+    }
+
+    section.container .content .brand {
+        flex-direction: column;
+    }
+
+    section.container .content .brand .left {
+        height: 100vh;
+    }
+
+    section.container .content .brand .copy {
+        height: 100%;
+         margin-left: 0px;
+         margin-top: 50vh;
+         padding: 50px;
+         width: 100%;
+    }
+
+    section.container .content .thirds {
+        height: 80vh;
+         padding: 50px;
+         width: 100%;
+    }
+
+    section.container .content .page {
+        height: 100vh;
+         width: 100%;
+    }
+
+    header .header-logo {
+        margin-left: 20px;
+         margin-top: 10px;
+    }
+
+    header .header-hamburger {
+        margin-right: 20px;
+         margin-top: 10px;
+    }
+
+    header .trigger {
+        backdrop-filter: blur(30px);
+         background: rgba(255, 255, 255, 0.75);
+         display: flex;
+         height: 64px;
+         opacity: 0;
+         pointer-events: none;
+         width: 100%;
+    }
+
+    header nav {
+        padding: 60px;
+    }
+
+    header nav ul.main li.item {
+        width: 300px;
+    }
+
+    .header-logo {
+        gap: 6px;
+    }
+
+    .header-logo video {
+        height: 44px;
+         width: 44px;
+    }
+
+    .header-logo span {
+        font-size: 20px !important;
+         transform: translateX(-50px);
+    }
+
+    .header-logo.white span {
+        color: rgb(0, 0, 0);
+    }
+
+    .header-hamburger .container {
+        height: 44px;
+         width: 44px;
+    }
+
+    .mouse-wheel {
+        display: none;
+    }
+
+    section.introduction .video .play-pause .icon-play-pause {
+        bottom: 20px;
+    }
+
+    section.aston-martin .content .page.page-4 {
+        height: auto;
+         padding-bottom: 60px;
+         padding-top: 60px;
+    }
+
+    section.aston-martin .content .page.page-4 .carousel {
+        padding-left: 50px;
+         padding-right: 50px;
+    }
+
+    .mimicmo .content .page.page-3 {
+        height: auto;
+    }
+
+    .carousel {
+        gap: 0px;
+         height: auto;
+         justify-content: space-between;
+         padding: 60px;
+    }
+
+    .carousel .column {
+        flex-shrink: 1;
+         height: auto;
+         padding-bottom: 0px;
+         padding-top: 0px;
+    }
+
+    .carousel .column .item .video, .carousel .column .item img, .carousel .column .item video, .carousel .column .item.shared-video .video, .carousel .column .item.shared-video img, .carousel .column .item.shared-video video {
+        height: auto;
+         width: 25vw;
+    }
+
+    .mentorcam .content .page.page-4 {
+        height: auto;
+    }
+
+    .lamborghini .content .page.page-4 {
+        height: auto;
+         padding-bottom: 60px;
+         padding-top: 60px;
+    }
+
+    .lamborghini .content .page.page-4 .carousel {
+        padding-left: 50px;
+         padding-right: 50px;
+    }
+
+    section.container.professional .content {
+        height: auto;
+    }
+
+    section.container.professional .content .thirds.startups {
+        left: 0px;
+         position: relative;
+         visibility: visible;
+    }
+
+    section.container.professional .content .page.video {
+        height: 100vh;
+         left: 0px;
+         position: relative;
+         width: 100%;
+    }
+
     .header-logo span {
         font-size: 20px !important;
          transform: translate(-50px);
@@ -2328,6 +1688,522 @@
     }
 }
  @media only screen and (max-width: 479px) {
+
+    section.container .content .brand .copy, section.container .content .brand .left {
+        width: 100%;
+    }
+
+    section.container .content .brand .copy {
+        padding: 25px;
+    }
+
+    section.container .content .thirds {
+        padding: 25px;
+    }
+
+    section.container .content .page.media {
+        height: 100vw;
+    }
+
+    .button.small {
+        border-radius: 24px;
+         font-size: 16px;
+         height: 36px;
+         padding-left: 20px;
+         padding-right: 20px;
+    }
+
+    .button.large {
+        border-radius: 28px;
+         font-size: 22px;
+         height: 56px;
+         opacity: 1;
+         padding-left: 30px;
+         padding-right: 30px;
+    }
+
+    .hide-on-mobile {
+        display: none !important;
+    }
+
+    h1 {
+        font-size: 44px;
+         letter-spacing: -1.2px;
+         line-height: 50px;
+    }
+
+    .h1 {
+        font-size: 44px !important;
+         letter-spacing: -1.2px !important;
+         line-height: 50px !important;
+    }
+
+    h2 {
+        font-size: 36px;
+         letter-spacing: -0.8px;
+         line-height: 40px;
+    }
+
+    h3 {
+        font-size: 22px;
+         letter-spacing: -0.2px;
+         line-height: 26px;
+    }
+
+    p.medium {
+        font-size: 20px;
+         letter-spacing: -0.22px;
+         line-height: 24px;
+    }
+
+    header nav {
+        align-items: flex-start;
+         clip-path: circle(24px at 100% 40px);
+         opacity: 0;
+         padding: 64px 0px 0px;
+         width: 100%;
+    }
+
+    header nav ul.main {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+         flex-direction: column;
+         gap: 20px;
+         height: 100%;
+         max-height: fit-content;
+         overflow-y: auto;
+         padding: 25px;
+         width: 100%;
+    }
+
+    header nav ul.main li.item {
+        width: 100%;
+    }
+
+    header nav ul.main li.item p.large {
+        font-size: 22px;
+         margin-bottom: 0px;
+         margin-left: 10px;
+    }
+
+    header nav ul.sub li a {
+        margin-left: -25px;
+         padding: 6px 35px;
+    }
+
+    header nav ul.sub li a span:first-child {
+        font-size: 34px;
+    }
+
+    header nav .bottom {
+        gap: 20px;
+         padding: 20px;
+    }
+
+    header nav .bottom .cta {
+        width: 100%;
+    }
+
+    header nav .bottom ul.social {
+        margin: -5px;
+    }
+
+    header nav .bottom ul.social li a {
+        height: 40px;
+         width: 40px;
+    }
+
+    header.scroll .trigger {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+         opacity: 1;
+    }
+
+    header.open .header-logo {
+        z-index: 102;
+    }
+    header.open .header-logo span {
+        color: rgb(255, 255, 255);
+    }
+
+    section.introduction {
+        height: auto;
+    }
+
+    section.introduction .content {
+        flex-direction: column;
+         gap: 0px;
+         height: auto;
+    }
+
+    section.introduction .video {
+        height: 70vh;
+         position: relative;
+    }
+
+    section.introduction h1 {
+        align-items: flex-start;
+         flex-direction: column;
+         justify-content: flex-start;
+         padding: 25px;
+         width: 100%;
+    }
+
+    section.introduction h1 .first, section.introduction h1 .second, section.introduction h1 .third {
+        display: flex;
+    }
+
+    section.introduction h1 .second .y-combinator {
+        height: 80px;
+         margin: 15px 0px 10px;
+         width: 100%;
+    }
+
+    section.introduction h1 .second .y-combinator svg {
+        height: 40px;
+    }
+
+    section.introduction h1 .third .aston-martin, section.introduction h1 .third .lamborghini {
+        margin-left: 0px;
+         margin-top: 15px;
+         width: 100%;
+    }
+
+    section.introduction h1 .third .aston-martin {
+        margin-top: 20px;
+    }
+
+    section.introduction h1 .second, section.introduction h1 .third {
+        align-items: flex-start;
+         flex-direction: column;
+         width: 100%;
+    }
+    section.introduction h1 .third {
+        display: flex;
+         justify-content: flex-start;
+    }
+    section.introduction h1 .first, section.introduction h1 .second, section.introduction h1 .third {
+        display: inline;
+    }
+
+    .logo-ycombinator {
+        height: 24px;
+         width: auto;
+    }
+
+    section.aston-martin .content .page.page-4 .carousel {
+        gap: 25px;
+         padding-left: 25px;
+         padding-right: 25px;
+         width: 100%;
+    }
+
+    section.aston-martin .content .page.page-4 .carousel .phones {
+        gap: 20px;
+    }
+
+    section.aston-martin .content .page.page-4 .carousel .phones .shadow-large:last-child {
+        display: none;
+    }
+    section.aston-martin .content .page.page-4 .carousel .phone-holder {
+        height: auto !important;
+         width: 100% !important;
+    }
+    section.aston-martin .content .page.page-4 .carousel .shadow-medium {
+        width: 100%;
+    }
+
+    section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone.shared-video {
+        border-radius: 20px;
+         width: 100%;
+    }
+
+    section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone .video, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone img, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone video, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone.shared-video .video, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone.shared-video img, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.phone.shared-video video {
+        height: auto;
+         width: 100%;
+    }
+
+    section.aston-martin .content .page.page-4 .carousel .phone-holder.item.desktop, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.desktop.shared-video {
+        border-radius: 6px;
+         width: 100%;
+    }
+
+    section.aston-martin .content .page.page-4 .carousel .phone-holder.item.desktop .video, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.desktop img, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.desktop video, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.desktop.shared-video .video, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.desktop.shared-video img, section.aston-martin .content .page.page-4 .carousel .phone-holder.item.desktop.shared-video video {
+        height: auto;
+         width: 100%;
+    }
+
+    section.aston-martin .content .brand .left svg {
+        height: 52px;
+    }
+
+    .mimicmo .content .brand .left svg {
+        height: 40px;
+    }
+
+    .carousel {
+        align-items: center;
+         flex-direction: column;
+         gap: 30px;
+    }
+
+    .carousel .column .item, .carousel .column .item.shared-video {
+        border-radius: 25px;
+    }
+
+    .carousel .column .item .video, .carousel .column .item img, .carousel .column .item video, .carousel .column .item.shared-video .video, .carousel .column .item.shared-video img, .carousel .column .item.shared-video video {
+        width: 70vw;
+    }
+
+    .carousel .column:last-child {
+        display: none;
+    }
+
+    .mentorcam .content .brand .left svg {
+        height: 42px;
+    }
+
+    .mentorcam .content .brand .copy .logos {
+        bottom: 20px;
+         gap: 15px;
+         width: calc(100% - 50px);
+    }
+    .mentorcam .content .brand .copy .logos p {
+        display: none;
+    }
+
+    .mentorcam .content .brand .copy .logos .logo-angelist {
+        display: none;
+         flex-shrink: 1;
+    }
+
+    .logo-general-catalyst {
+        height: 34px;
+         width: auto;
+    }
+
+    .logo-angelist {
+        height: 20px;
+         width: auto;
+    }
+
+    .logo-goodwater {
+        height: 18px;
+         width: auto;
+    }
+
+    .lamborghini .content .brand .left svg {
+        height: 42px;
+    }
+
+    .lamborghini .content .page.page-4 .carousel {
+        gap: 25px;
+         padding-left: 25px;
+         padding-right: 25px;
+         width: 100%;
+    }
+    .lamborghini .content .page.page-4 .carousel .shadow-medium {
+        width: 100%;
+    }
+
+    .lamborghini .content .page.page-4 .carousel .phone-holder, .lamborghini .content .page.page-4 .carousel .phone-holder {
+        height: auto !important;
+         width: 100% !important;
+    }
+
+    .lamborghini .content .page.page-4 .carousel .item.desktop, .lamborghini .content .page.page-4 .carousel .item.desktop {
+        border-radius: 6px;
+    }
+
+    .lamborghini .content .page.page-4 .carousel .item.desktop .video, .lamborghini .content .page.page-4 .carousel .item.desktop img, .lamborghini .content .page.page-4 .carousel .item.desktop video, .lamborghini .content .page.page-4 .carousel .item.desktop .video, .lamborghini .content .page.page-4 .carousel .item.desktop img, .lamborghini .content .page.page-4 .carousel .item.desktop video {
+        height: auto;
+         width: 100%;
+    }
+
+    section.slide.brands {
+        flex-direction: column;
+         gap: 25px;
+         justify-content: center;
+         padding: 64px 25px 25px;
+    }
+
+    section.slide.brands .copy {
+        padding: 0px;
+    }
+
+    section.slide.brands .logos {
+        display: grid;
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+         padding: 0px;
+    }
+
+    section.slide.brands .logos .holder {
+        border-radius: 12px;
+         height: 100%;
+         width: 100%;
+    }
+
+    .logo-emirates {
+        height: 44px;
+    }
+
+    .logo-etihad {
+        height: 32px;
+    }
+
+    .logo-pg {
+        height: 26px;
+    }
+
+    .logo-unilever {
+        height: 48px;
+    }
+
+    .logo-mercedes {
+        height: 32px;
+         width: auto;
+    }
+
+    .logo-visa {
+        height: 26px;
+         width: auto;
+    }
+
+    .logo-dodge {
+        height: 16px;
+         width: auto;
+    }
+
+    .logo-ford {
+        height: 32px;
+         width: auto;
+    }
+
+    .logo-volvo {
+        height: 14px;
+         width: auto;
+    }
+
+    .logo-pepsi {
+        height: 32px;
+         width: auto;
+    }
+
+    section.container.professional .content .thirds.startups .logos {
+        gap: 5px;
+         grid-template-columns: repeat(2, 1fr);
+    }
+
+    section.container.professional .content .thirds.startups .logos .holder {
+        border-radius: 12px;
+         height: 60px;
+         width: 100%;
+    }
+
+    section.container.professional .content .page.video .logos {
+        display: grid;
+         gap: 4px;
+         grid-template-columns: repeat(3, 1fr);
+         justify-items: center;
+         padding: 0px;
+         position: relative;
+         width: calc(100% + 20px);
+    }
+
+    section.container.professional .content .page.video .logos .item {
+        border-radius: 8px;
+         height: 38px;
+         width: 100%;
+    }
+
+    section.container.professional .content .page.video .logos .item svg {
+        transform: translateY(5px);
+    }
+    section.container.professional .content .page.video .logos .item svg.figma {
+        height: 22px;
+         width: auto;
+    }
+    section.container.professional .content .page.video .logos .item svg.vue {
+        height: 26px;
+         width: auto;
+    }
+    section.container.professional .content .page.video .logos .item svg.nuxt {
+        height: 18px;
+         width: auto;
+    }
+    section.container.professional .content .page.video .logos .item svg.react {
+        height: 24px;
+         width: auto;
+    }
+    section.container.professional .content .page.video .logos .item svg.next {
+        height: 14px;
+         width: auto;
+    }
+    section.container.professional .content .page.video .logos .item svg.mongodb {
+        height: 24px;
+         width: auto;
+    }
+    section.container.professional .content .page.video .logos .item svg.flutter {
+        height: 26px;
+         width: auto;
+    }
+    section.container.professional .content .page.video .logos .item svg.node {
+        height: 30px;
+         width: auto;
+    }
+
+    section.container.professional .content .page.video .holder {
+        flex-direction: column;
+         gap: 25px;
+         padding: 25px;
+    }
+
+    section.container.professional .content .page.video .holder .title {
+        gap: 5px;
+         transform: translateY(10px);
+         width: 100%;
+    }
+
+    section.container.professional .content .page.video .holder .title p {
+        font-size: 18px;
+    }
+
+    .logo-sno {
+        height: 24px;
+         width: auto;
+    }
+
+    .logo-techstars {
+        height: 20px;
+         width: auto;
+    }
+
+    section.contact {
+        align-items: flex-start;
+         flex-direction: column;
+         gap: 20px;
+         justify-content: center;
+         padding: 25px;
+    }
+
+    section.contact .logos {
+        gap: 10px;
+         padding: 25px;
+         width: 100%;
+    }
+
+    section.contact .logos .logo {
+        height: 56px;
+         width: 56px;
+    }
+    section.contact .logos .logo.email svg, section.contact .logos .logo.linkedin svg {
+        height: auto;
+         width: 28px;
+    }
+    section.contact .logos .logo.instagram svg {
+        height: auto;
+         width: 30px;
+    }
+
     section.aston-martin .content .page.page-1 {
         height: 100vh !important;
     }
